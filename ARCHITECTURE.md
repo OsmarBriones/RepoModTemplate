@@ -46,4 +46,4 @@ Briefly summarize what this mod does:
 Follows the 3-tier testing strategy in `external/RepoKit/REPO_MODS_METHODOLOGY.md` §8:
 1. **Tier 1 (Unit tests):** Decouple pure business logic and test via a companion test project (`dotnet test`).
 2. **Tier 2 (Harmony verification):** Verify that patch targets exist in `Assembly-CSharp.dll` before deploying.
-3. **Tier 3 (In-game triggers):** For rapid validation, wire debug triggers or hotkeys to simulate mod events without waiting for rare in-game encounters.
+3. **Tier 3 (In-game smoke test / Optional debug triggers):** Default validation is done simply by launching the game and observing normal gameplay. Custom hotkeys/triggers are strictly optional and off by default, only used when mechanics are rare or difficult to reach naturally.
