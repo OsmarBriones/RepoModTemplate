@@ -22,6 +22,7 @@ for .NET Framework 4.8.
 - Preserve existing local modifications. Do not reset, discard, or overwrite
   unrelated work.
 - Testing: Follow the 3-tier testing strategy in `external/RepoKit/REPO_MODS_METHODOLOGY.md` §8 (Tier 1 unit tests, Tier 2 Harmony reflection verification, Tier 3 in-game smoke tests; debug triggers are optional and opt-in).
+- Coding standards: Follow `external/RepoKit/REPO_MODS_METHODOLOGY.md` §6 (clean PascalCase/camelCase, no `_` or `s_` prefixes, scope classes to `internal` by default, BepInEx logger).
 - Maintain documentation with implementation: update this file, `README.md`,
   `CHANGELOG.md`, and `ARCHITECTURE.md` when runtime or design facts change.
 
