@@ -21,6 +21,7 @@ for .NET Framework 4.8.
     and include only the required modules via `<Compile Include>` in `.csproj`.
 - Preserve existing local modifications. Do not reset, discard, or overwrite
   unrelated work.
+- Testing: Follow the 3-tier testing strategy in `external/RepoKit/REPO_MODS_METHODOLOGY.md` §8 (Tier 1 unit tests, Tier 2 Harmony reflection verification, Tier 3 in-game triggers).
 - Maintain documentation with implementation: update this file, `README.md`,
   `CHANGELOG.md`, and `ARCHITECTURE.md` when runtime or design facts change.
 

@@ -38,3 +38,12 @@ Briefly summarize what this mod does:
 
 - **Standalone build:** This repository builds into a single self-contained DLL (`RepoModTemplate.dll`).
 - **Configuration reload:** Settings reload cleanly on level transition without requiring a game restart.
+
+---
+
+## Testing Strategy
+
+Follows the 3-tier testing strategy in `external/RepoKit/REPO_MODS_METHODOLOGY.md` §8:
+1. **Tier 1 (Unit tests):** Decouple pure business logic and test via a companion test project (`dotnet test`).
+2. **Tier 2 (Harmony verification):** Verify that patch targets exist in `Assembly-CSharp.dll` before deploying.
+3. **Tier 3 (In-game triggers):** For rapid validation, wire debug triggers or hotkeys to simulate mod events without waiting for rare in-game encounters.
