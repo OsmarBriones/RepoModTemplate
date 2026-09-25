@@ -361,3 +361,9 @@ MigrationBackup/
 
 # Fody - auto-generated XML schema
 FodyWeavers.xsd
+
+# R.E.P.O. Mod packaging artifacts
+ts_build/
+Thunderstore/
+dist/
+*.zip

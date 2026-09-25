@@ -1,0 +1,31 @@
+# RepoModTemplate — Local Agent Context
+
+This is an independent BepInEx 5.x mod repository for R.E.P.O. Its entry
+point is `RepoModTemplatePlugin.cs`, and it builds `RepoModTemplate.dll`
+for .NET Framework 4.8.
+
+## Working rules
+
+- This repository must remain usable after a normal clone. Do not require its
+  parent workspace for normal builds or documentation.
+- Build with `dotnet build RepoModTemplate.csproj`. The post-build configuration
+  deploys to the game Steam plugins folder and local r2modman Debug profile.
+- Configuration and paths:
+  - Game paths and target framework are configured in `Directory.Build.props`.
+  - Override the default Steam path if needed with the `REPO_GAME_DIR` environment variable.
+- Shared code and guidance:
+  - Add `RepoKit` for canonical workspace guidance:
+    `git submodule add https://github.com/OsmarBriones/RepoKit.git external/RepoKit`
+  - If consuming `RepoAPI` for reusable game logic (item spawning, keys, etc.):
+    `git submodule add https://github.com/OsmarBriones/RepoAPI.git external/RepoAPI`
+    and include only the required modules via `<Compile Include>` in `.csproj`.
+- Preserve existing local modifications. Do not reset, discard, or overwrite
+  unrelated work.
+- Maintain documentation with implementation: update this file, `README.md`,
+  `CHANGELOG.md`, and `ARCHITECTURE.md` when runtime or design facts change.
+
+Before the first edit of every task, synchronize
+`external/RepoKit` once and follow its synchronization gate. Read
+its `VERSION.md`, `REPO_MODS_WORKSPACE.md`, and
+`REPO_MODS_METHODOLOGY.md`; do not repeat that check during the same task
+unless shared guidance changes.
