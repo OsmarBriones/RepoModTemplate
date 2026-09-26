@@ -1,28 +1,40 @@
 # RepoModTemplate
-This mod . Only the host needs to have it — clients do not.
+
+[Short 1-2 sentence description of what the mod brings to the player's game. Example: "Adds customizable duck spawns across the facility to bring joy and chaos to your salvage runs."]
+
+Only the host needs to have this mod installed — other players see the effects automatically without installing anything.
 
 ## Features
-- Only the host needs to have the mod installed — clients do not.
-- Configuration changes apply when loading a level.
+
+<!--
+  PLAYER-FACING FEATURES GUIDELINE:
+  This section is for players on Thunderstore and mod managers.
+  - Describe gameplay mechanics, effects, audiovisual feedback, and player experience.
+  - Highlight multiplayer behavior in plain language (e.g., host-only installation).
+  - DO NOT include Unity engine terms, hook/patch target names (e.g., EnemyDirector, TruckSafetySpawnPoint),
+    Harmony methods, or internal code architecture here (put those in ARCHITECTURE.md).
+-->
+
+- **Exciting Gameplay Mechanic**: Explain what players experience in-game.
+- **Dynamic Facility Effects**: Describe the in-game behavior and balance.
+- **Host-Only Multiplayer**: Only the host needs the mod installed; effects are fully synchronized for all players in the lobby.
+- **Customizable Experience**: Adjust settings via the configuration file to tune the mod to your liking.
 
 ## Requirements
 - [BepInEx Pack for R.E.P.O.](https://thunderstore.io/c/repo/p/BepInEx/BepInExPack/)
 
 ## Installation
 1. Install the latest [BepInEx Pack](https://thunderstore.io/c/repo/p/BepInEx/BepInExPack/).
-2. Place `RepoModTemplate.dll` into your `BepInEx/plugins` folder.
+2. Place `RepoModTemplate.dll` into your `BepInEx/plugins` folder (or install via r2modman / Thunderstore Mod Manager).
 3. Launch the game once — the configuration file will be generated automatically inside `BepInEx/config`.
 
 ## Configuration
 All settings are controlled through the generated file: `AUTHOR_ID.RepoModTemplate.cfg` located in `BepInEx/config`.
 
-Describe your config values here.
-
-Example:
-`ExampleSetting = 3`
+- `ExampleSetting` (default `3`): Describe the gameplay effect of this option in plain words.
 
 ## Support
-If something doesn’t work, feel free to send an email to .
+If something doesn’t work, feel free to report issues on GitHub.
 
 ## Credits
-Developed by **AUTHOR_ID**
+Developed by **AUTHOR_NAME**

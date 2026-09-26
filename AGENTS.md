@@ -23,6 +23,8 @@ for .NET Framework 4.8.
   unrelated work.
 - Testing: Follow the 3-tier testing strategy in `external/RepoKit/REPO_MODS_METHODOLOGY.md` §8 (Tier 1 unit tests, Tier 2 Harmony reflection verification, Tier 3 in-game smoke tests; debug triggers are optional and opt-in).
 - Coding standards: Follow `external/RepoKit/REPO_MODS_METHODOLOGY.md` §6 (clean PascalCase/camelCase, no `_` or `s_` prefixes, scope classes to `internal` by default, BepInEx logger).
+- Author vs. Technical Identifier: Human developer author is **always** `Osmar Briones` (credits in `README.md`, `<Authors>` tag in `.csproj`). Technical reverse-DNS `com.osmar` is strictly reserved for GUIDs (`PluginGuid`), config file names (`BepInEx/config/com.osmar.<ModName>.cfg`), and namespaces.
+- Player-friendly README (`## Features`): Thunderstore documentation is for players. The `## Features` section must describe gameplay mechanics and player experience in accessible language. **Never** leak internal Unity engine hooks (`EnemyDirector.Start`, `TruckSafetySpawnPoint`, etc.), Harmony patches, class/method names, or code architecture into `README.md`; those belong strictly in `ARCHITECTURE.md`.
 - Spec Kit (SDD): Spec Kit is pre-configured in `.specify/`. Its constitution at `.specify/memory/constitution.md` automatically enforces RepoKit, host authority, and coding standards. Use `/speckit-specify`, `/speckit-plan`, and `/speckit-tasks` when developing features.
 - Maintain documentation with implementation: update this file, `README.md`,
   `CHANGELOG.md`, and `ARCHITECTURE.md` when runtime or design facts change.

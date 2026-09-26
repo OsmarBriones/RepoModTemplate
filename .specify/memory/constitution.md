@@ -35,6 +35,10 @@ Follow §8 of `REPO_MODS_METHODOLOGY.md`:
 2. **Tier 2 (Harmony verification):** Reflection tests to verify that patch targets exist in `Assembly-CSharp.dll` before deploying.
 3. **Tier 3 (In-game smoke test):** Normal gameplay observation via r2modman debug profile. Custom debug hotkeys or triggers are strictly optional, opt-in, and disabled by default.
 
+### VI. Audience Separation & Author Identity
+- **Author vs. Technical ID:** Visible author credits in `README.md` and `<Authors>` in `.csproj` must always be `Osmar Briones`. Reverse-DNS `com.osmar` is strictly reserved for technical identifiers (`PluginGuid`, config files `com.osmar.<ModName>.cfg`, and namespaces).
+- **Player-Friendly Features:** `README.md` is Thunderstore player-facing documentation. The `## Features` section must be written from the player's perspective, focusing on gameplay experience, balance, and mechanics in accessible language. Internal Unity hooks (`EnemyDirector.Start`, `TruckSafetySpawnPoint`, etc.), Harmony patches, and code architecture are strictly forbidden in `README.md` and belong in `ARCHITECTURE.md`.
+
 ## Governance
 This constitution supersedes ad-hoc prompt instructions. Any planned feature, specification, or code change must verify compliance with these principles.
 

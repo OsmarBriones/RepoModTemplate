@@ -38,12 +38,19 @@
   ],
 
   "symbols": {
+    "Author": {
+      "type": "parameter",
+      "datatype": "text",
+      "description": "Developer name for credits and .csproj (e.g. Osmar Briones)",
+      "replaces": "AUTHOR_NAME",
+      "defaultValue": "Osmar Briones"
+    },
     "AuthorId": {
       "type": "parameter",
       "datatype": "text",
-      "description": "Author ID for the GUID (e.g. com.johndoe)",
+      "description": "Technical author identifier / reverse-DNS prefix for GUID and config (e.g. com.osmar)",
       "replaces": "AUTHOR_ID",
-      "defaultValue": "com.example"
+      "defaultValue": "com.osmar"
     }
   }
 }

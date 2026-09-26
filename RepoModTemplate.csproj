@@ -4,7 +4,7 @@
   <PropertyGroup>
     <RootNamespace>RepoModTemplate</RootNamespace>
     <AssemblyName>RepoModTemplate</AssemblyName>
-    <Authors>AUTHOR_ID</Authors>
+    <Authors>AUTHOR_NAME</Authors>
     <Version>1.0.0</Version>
     <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
   </PropertyGroup>

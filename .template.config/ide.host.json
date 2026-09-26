@@ -11,9 +11,16 @@
       "isVisible": true
     },
     {
+      "id": "Author",
+      "name": {
+        "text": "Developer Name (e.g. Osmar Briones)"
+      },
+      "isVisible": true
+    },
+    {
       "id": "AuthorId",
       "name": {
-        "text": "Author ID (e.g. com.johndoe)"
+        "text": "Technical Author ID / reverse-DNS prefix (e.g. com.osmar)"
       },
       "isVisible": true
     }
