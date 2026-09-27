@@ -32,7 +32,8 @@
         "dist/**",
         ".vs/**",
         ".git/**",
-        ".gitmodules"
+        ".gitmodules",
+        ".template.config/**"
       ]
     }
   ],
