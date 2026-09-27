@@ -3,7 +3,7 @@ using HarmonyLib;
 namespace RepoModTemplate.Patches;
 
 /// <summary>
-/// Reloads configuration and resets state when a playable level loads.
+/// Reloads configuration and resets per-level state when a playable level loads.
 /// 
 /// LIFECYCLE GUIDANCE:
 /// - EnemyDirector.Start runs at Frame 0 of scene load, BEFORE procedural generation completes.
@@ -13,7 +13,7 @@ namespace RepoModTemplate.Patches;
 ///   or SemiFunc.OnLevelGenDone instead (executes after LevelGenerator.Instance.Generated is true).
 /// </summary>
 [HarmonyPatch(typeof(EnemyDirector), "Start")]
-internal static class ReloadOnLevelStart
+internal static class EnemyDirector_Start_Patch
 {
 	[HarmonyPostfix]
 	private static void Postfix()

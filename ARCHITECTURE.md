@@ -16,7 +16,7 @@ Briefly summarize what this mod does:
 ## Main Data Flow
 
 ### 1. Level Start / Initialization
-- Entry point: `Patches/ReloadOnLevelStart.cs` (Harmony patch on `EnemyDirector.Start`).
+- Entry point: `Patches/EnemyDirector_Start_Patch.cs` (Harmony patch on `EnemyDirector.Start`).
 - Checks `SemiFunc.RunIsLevel()` to ensure execution only in playable levels.
 - Refreshes configuration via `ConfigurationController.Reload()`.
 - Resets any per-level state or counters.

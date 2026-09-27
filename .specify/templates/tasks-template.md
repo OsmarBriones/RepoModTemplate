@@ -18,7 +18,7 @@ description: "Task list template for R.E.P.O. mod feature implementation"
 **Purpose**: Build configuration, submodules, and mod base setup
 
 - [ ] T001 Configure `[ModName].csproj` with required `RepoAPI` submodule items (`external/RepoAPI/...`)
-- [ ] T002 [P] Clean or configure template placeholder patch `Patches/ReloadOnLevelStart.cs`
+- [ ] T002 [P] Clean or configure template placeholder patch `Patches/EnemyDirector_Start_Patch.cs`
 
 ---
 
