@@ -81,8 +81,8 @@
     </Reference>
   </ItemGroup>
 
-  <!-- PostBuild: deploy to Steam and r2modman Debug profile -->
-  <Target Name="PostBuild" AfterTargets="PostBuildEvent">
+  <!-- PostBuild: deploy to Steam and r2modman Debug profile (skipped when building the template itself) -->
+  <Target Name="PostBuild" AfterTargets="PostBuildEvent" Condition="'$(AssemblyName)' != '$([System.String]::Concat(&quot;RepoMod&quot;, &quot;Template&quot;))'">
     <!-- Steam plugins directory -->
     <Exec ContinueOnError="true" Command="set DEST=&quot;$(RepoRootPath)\BepInEx\plugins&quot;&#xD;&#xA;if not exist %25DEST%25 mkdir %25DEST%25&#xD;&#xA;xcopy /Y /R /I &quot;$(TargetPath)&quot; %25DEST%25\" />
 

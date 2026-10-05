@@ -8,8 +8,10 @@ for .NET Framework 4.8.
 
 - This repository must remain usable after a normal clone. Do not require its
   parent workspace for normal builds or documentation.
-- Build with `dotnet build RepoModTemplate.csproj`. The post-build configuration
-  deploys to the game Steam plugins folder and local r2modman Debug profile.
+- Build with `dotnet build RepoModTemplate.csproj`. The post-build deployment
+  target is conditioned to skip execution when `AssemblyName` is `RepoModTemplate`
+  to prevent deploying the template into game installations; mods scaffolded from
+  the template will deploy to Steam and r2modman Debug profile normally.
 - Configuration and paths:
   - Game paths and target framework are configured in `Directory.Build.props`.
   - Override the default Steam path if needed with the `REPO_GAME_DIR` environment variable.

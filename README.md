@@ -4,6 +4,17 @@
 
 Only the host needs to have this mod installed — other players see the effects automatically without installing anything.
 
+## Preview
+
+<!-- Visual gameplay demo GIF (auto-configured by RepoKit tools or placed in assets/preview.gif) -->
+![Gameplay Preview](https://raw.githubusercontent.com/OsmarBriones/RepoModTemplate/master/assets/preview.gif)
+
+## How to Use
+
+1. **Quick Start**: Explain how the player starts using or finds the mod content in-game.
+2. **Controls / Triggers**: Explain the key bindings or player actions (e.g. Press `E` to toggle).
+3. **Feedback**: Describe how the player knows the mod is active (HUD prompt, sound, or visual cue).
+
 ## Features
 
 <!--
