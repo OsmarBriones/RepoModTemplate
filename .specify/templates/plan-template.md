@@ -38,6 +38,18 @@
 - [ ] **IV. Shared Code Hygiene (RepoAPI)**: Reusable logic consumed from `external/RepoAPI` via `<Compile Include>` in `.csproj`. No duplicate generic code.
 - [ ] **V. 3-Tier Testing**: Tier 3 smoke testing via Steam / r2modman Debug profile (debug hotkeys strictly optional and disabled by default).
 
+## Known Pitfalls Check
+
+*Compare the design against `external/RepoKit/references/known-pitfalls.md`. One line per entry; re-verify the safeguards before finishing.*
+
+| Entry | Relevant? | Safeguard or reason |
+|-------|-----------|---------------------|
+| [P-001 Mod-spawned items grow the item lists] | [yes/no] | [cap, cleanup before save, reuse ItemPreservation / why not relevant] |
+| [P-002 Shop items inherit a battery] | [yes/no] | [...] |
+| [P-003 Singleplayer view ids are 0] | [yes/no] | [...] |
+| [P-004 A running game locks the deployed DLL] | [yes/no] | [...] |
+| [P-005 Hidden objects and extraction rooms] | [yes/no] | [...] |
+
 ## Project Structure
 
 ### Documentation (this feature)
