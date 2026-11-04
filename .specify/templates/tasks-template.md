@@ -49,3 +49,4 @@ description: "Task list template for R.E.P.O. mod feature implementation"
 - [ ] T009 [P] Update `ARCHITECTURE.md` to reflect runtime flow and lifecycle hooks
 - [ ] T010 [P] Update `README.md` and `CHANGELOG.md` with new features and config keys
 - [ ] T011 Perform Tier 3 smoke testing via Steam or r2modman Debug profile
+- [ ] T012 Known pitfalls gate: re-verify the safeguards listed in `plan.md`, then review the "Pitfall candidates" in `research.md` and promote the ones that pass the filter to `external/RepoKit/references/known-pitfalls.md`
