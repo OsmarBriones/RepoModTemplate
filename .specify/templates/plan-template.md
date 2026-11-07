@@ -50,6 +50,14 @@
 | [P-004 A running game locks the deployed DLL] | [yes/no] | [...] |
 | [P-005 Hidden objects and extraction rooms] | [yes/no] | [...] |
 
+## Configuration Types Check
+
+*Every configuration variable is analysed before it is added. Decide its type, unit and valid values, and ask: can it be negative? is 0 meaningful or does it break something? is there a sensible maximum? Numeric settings must declare an `AcceptableValueRange` (or `AcceptableValueList`); the code clamps the value again where it is used, because values can also arrive from the network or be computed. Run `external/RepoKit/scripts/check-config-types.ps1` before finishing.*
+
+| Setting | Type | Unit | Valid values | Why these limits / what happens at the extremes |
+|---------|------|------|--------------|-------------------------------------------------|
+| [Cooldown] | [float] | [seconds] | [0 to 600] | [0 = no pause; negative would act like 0 and confuse; over 600 is never useful] |
+
 ## Project Structure
 
 ### Documentation (this feature)
