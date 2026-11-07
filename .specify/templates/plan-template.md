@@ -58,6 +58,18 @@
 |---------|------|------|--------------|-------------------------------------------------|
 | [Cooldown] | [float] | [seconds] | [0 to 600] | [0 = no pause; negative would act like 0 and confuse; over 600 is never useful] |
 
+## Runtime Hygiene Check
+
+*Review the design against `external/RepoKit/references/runtime-hygiene.md`: one line per item (`ok`, `fixed: what` or `not applicable: why`); re-check before finishing.*
+
+| Item | Result |
+|------|--------|
+| 1. References to game objects are released when a level ends (per-level state cleared at the end, working buffers emptied, caps on caches, subscriptions removed, changes restored) | [ok / fixed / n.a.] |
+| 2. No work every frame that can be event-driven or throttled; nothing computed while the condition is false | [...] |
+| 3. No allocations in hot paths; no scene-wide `Find...` in per-frame code | [...] |
+| 4. UI properties change only when the value changed; layout cached by its inputs | [...] |
+| 5. Patches on hot methods exit early and do O(1) work | [...] |
+
 ## Project Structure
 
 ### Documentation (this feature)

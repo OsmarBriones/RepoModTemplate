@@ -50,4 +50,5 @@ description: "Task list template for R.E.P.O. mod feature implementation"
 - [ ] T010 [P] Update `README.md` and `CHANGELOG.md` with new features and config keys
 - [ ] T011 Perform Tier 3 smoke testing via Steam or r2modman Debug profile
 - [ ] T011 Configuration types gate: every setting is listed in the plan's "Configuration Types Check", numeric ones have a value range, and `external/RepoKit/scripts/check-config-types.ps1` reports no errors
+- [ ] T013 Runtime hygiene gate: the plan's "Runtime Hygiene Check" is filled in and the code matches it (references released when the level ends, work throttled, no allocations in hot paths, UI touched only on change), see `external/RepoKit/references/runtime-hygiene.md`
 - [ ] T012 Known pitfalls gate: re-verify the safeguards listed in `plan.md`, then review the "Pitfall candidates" in `research.md` and promote the ones that pass the filter to `external/RepoKit/references/known-pitfalls.md`
